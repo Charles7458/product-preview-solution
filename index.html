@@ -10,16 +10,13 @@
     </head>
     <body>
         <div class="wrapper" role="main">
-            <img alt="product image" src="assets/image-product-desktop.jpg" id="product-img">
-            <script>
-                let width = window.innerWidth;
-                if (width >= 1000) {
-                document.getElementById("product-img").src="assets/image-product-desktop.jpg";
-            }
-                if (width <= 430) {
-                document.getElementById("product-img").src="assets/image-product-mobile.jpg";
-            }
-            </script>
+            <picture>
+                <source srcset="assets/image-product-mobile.jpg" media="(max-width:600px)">
+                <source srcset="assets/image-product-desktop.jpg" media="(max-width:1600px)">
+                <img alt="product image" src="assets/image-product-desktop.jpg" id="product-img">
+            </picture>
+            
+            
             <div class="text-wrap" >
                 <p class="perfume">PERFUME</p>
                 <h1 class="heading" >Gabrielle Essence Eau De Parfum</h1>
